@@ -9,7 +9,7 @@ Homework 1
 ![alt text](image.png)
 
 # Problem 2
-
+![alt text](image-1.png)
 # Problem 3
 
 # Problem 4
