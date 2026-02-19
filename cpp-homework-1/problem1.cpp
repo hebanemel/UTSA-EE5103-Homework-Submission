@@ -5,10 +5,10 @@ int main()
 
   
   std::cout << "Enter three(3) temperatures: "; 
-  std::cin >> temp1, temp2, temp3; //statement. We do not add << std::endl; at the of the prompt bcause we still want the user to type on the same line
+  std::cin >> temp1 >> temp2 >> temp3; //statement. We do not add << std::endl; at the of the prompt bcause we still want the user to type on the same line
 
   // Calculate and print average
-  float average = (temp1 + temp2 + temp3)/3;
+  float average = (temp1 + temp2 + temp3)/3.0;
   std::cout << "Average temperature: " << average << std::endl;
 
   // Printing the state of temperature based on avg.
