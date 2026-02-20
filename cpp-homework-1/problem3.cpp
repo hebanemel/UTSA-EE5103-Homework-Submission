@@ -1,31 +1,42 @@
-#include <iostream>     // Header: input/output tools
+#include <iostream>
 #include <vector>
+
 int main()
 {
-  std::vector<int> numbers;
-  int digit;
-  
-  while(digit != -1){
-    std::cout << "Enter a number (Enter -1 to stop): ";
-    std::cin >> digit;
-    numbers.push_back(digit); // add entered digit to the vector "numbers"
-    
-    // Print the numbers in the vector
-    int num;
-    std::cout << "The numbers entered are: ";
-    
-    for (num : numbers) {
-      std::cout << num << " ";
+    std::vector<int> numbers;
+    int digit;
 
-      // sum of the numbers
-      int sum = 0;
-      sum += num;   // accumulation
+    while (true) {
+        std::cout << "Enter a number (Enter -1 to stop): ";
+        std::cin >> digit;
+
+        if (digit == -1) {
+            break;
+        }
+
+        numbers.push_back(digit);
     }
 
-    // average of the numbers
-    double average;
-    average = <double>(sum) / numbers.size();
-    std::cout << "Average: " << average << std::endl;
-  }
+    // Print numbers
+    std::cout << "The numbers entered are: ";
+    for (int num : numbers) {
+        std::cout << num << " " << std::endl;
+
+    }
+    
+    // Calculate sum
+    int sum = 0;
+    for (int num : numbers) {
+        sum += num;
+    }
+
+    std::cout << "Sum: " << sum << std::endl;
+
+    // Calculate average
+    
+   double average = sum / numbers.size();
+   std::cout << "Average: " << average << std::endl;
+    
+
     return 0;
 }
