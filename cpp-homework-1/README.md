@@ -13,9 +13,9 @@ Homework 1
 I learned how to find the length of a word using.length from chatgpt. I could not find it in the lecture notes.
 
 # Problem 3
-
+![alt text](image-2.png)
 
 # Problem 4
-
+![alt text](image-3.png)
 
 # Problem 5
