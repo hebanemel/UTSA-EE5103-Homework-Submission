@@ -10,8 +10,12 @@ Homework 1
 
 # Problem 2
 ![alt text](image-1.png)
+I learned how to find the length of a word using.length from chatgpt. I could not find it in the lecture notes.
+
 # Problem 3
 
+
 # Problem 4
+
 
 # Problem 5
