@@ -1,4 +1,1 @@
-10 20 30
-5 15
-100 200 300 400
-01 lk
+The program prompts the user to enter the name of a text file and reads the file line by line using std::ifstream. Each line is processed with std::istringstreamto extract individual words. The program uses a std::map<std::string, int>to keep track of how many times each word appears in the file by incrementing the count whenever a word is encountered. Helper functions are used to process each line and to determine the most frequent words. After the entire file is read, the program sorts the word counts and prints the five most frequently occurring words along with the number of times they appear.
