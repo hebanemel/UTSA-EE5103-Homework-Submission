@@ -98,3 +98,27 @@ double average(const std::vector<int>& values)
 
     return (double)sum / values.size();
 }
+
+
+
+
+
+
+
+#include <iostream>
+
+class Counter {
+private:
+    int value;
+
+public:
+    Counter() : value(0) {}
+
+    void increment() {
+        value++;
+    }
+
+    int getValue() const {
+        return value;
+    }
+};

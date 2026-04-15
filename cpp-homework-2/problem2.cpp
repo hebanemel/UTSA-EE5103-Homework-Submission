@@ -10,8 +10,7 @@ private:
 
 public:
     // Default constructor
-    InventoryItem() 
-        : name_(""), quantity_(0), unit_price_(0.0)
+    InventoryItem() : name_(""), quantity_(0), unit_price_(0.0)
     {
         object_count_++;
     }
