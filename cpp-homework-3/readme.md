@@ -16,10 +16,11 @@ The program uses C++ generic algorithms to process text without manual loops. It
 The program reads the file line by line and builds a word index using a std::map whose key is a word and whose value is a std::set of line numbers. Each word is normalized by removing punctuation and converting letters to lowercase before being stored. As each line is processed, the current line number is inserted into the set for that word, which automatically avoids duplicate line numbers. After the file is processed, the user can repeatedly search for a word, and the program uses map::find to display all line numbers where that word appears
 
 # Problem 3
-
-
+![alt text](image-2.png)
+The class stores its collection in a std::shared_ptr<std::vector<std::string>>, so multiple TextCollection objects can share the same underlying data safely. The default constructor creates an empty collection, and the file constructor reads words from a file into the shared vector. The member functions addWord, removeWord, and printAll modify or display the shared data. In main, one object is copied into another to demonstrate shared ownership, and changes made through one object are reflected in the other.
 
 
 # Problem 4
 
-
+![alt text](image-3.png)
+This version uses a shared_ptr<vector<string>> with a custom deleter so the program can log when the shared resource is actually destroyed. Since shared_ptr uses shared ownership, the vector is not deleted when one object goes out of scope, but only when the last owner is destroyed. The custom deleter prints a message at that moment, which demonstrates both resource sharing and object lifetime clearly
