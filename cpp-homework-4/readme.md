@@ -17,5 +17,9 @@ NumberList manages a dynamically allocated integer array, so it follows the Rule
 
 # Problem 3
 ![alt text](image-2.png)
+This solution uses an abstract base class, LibraryItem, to define a common interface for all library items. The pure virtual functions lateFee() and clone() make the class abstract, while the virtual destructor ensures proper cleanup through base-class pointers. Book and DVD inherit publicly from LibraryItem and override the virtual functions with their own late-fee rules. Objects are stored in a std::vector<LibraryItem*>, which prevents slicing and allows dynamic binding, so the correct derived-class version of lateFee() and print() runs at runtime. Finally, all dynamically allocated objects are deleted to avoid memory leaks.
 
 # Problem 4
+![alt text](image-3.png)
+
+SmartBuffer manages a dynamically allocated integer array, so it implements copy control and move control. The copy constructor and copy-assignment operator allocate new memory and copy the contents, while the move constructor and move-assignment operator simply transfer ownership of the array pointer from one object to another. After moving, the source object is reset to nullptr and size 0, making it safe to destroy. The noexcept keyword helps std::vector choose move operations instead of copy operations during reallocation.
